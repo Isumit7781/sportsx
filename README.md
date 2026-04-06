@@ -10,15 +10,6 @@
 
 Welcome to the **Sports Management System**! This platform empowers administrators and players with role-based portals, rich real-time analytics, dynamic schedules, and a beautiful UI built on Tailwind CSS.
 
-## 📸 System Previews
-
-> *(Pro-tip: Upload screenshots of your Admin Dashboard and Player Portal to your repo and replace these placeholders!)*
-
-<div align="center">
-  <img src="https://placehold.co/800x400/5046E5/FFFFFF?text=Admin+Dashboard+Screenshot" alt="Admin Dashboard" width="48%" />
-  <img src="https://placehold.co/800x400/8A84FF/FFFFFF?text=Player+Portal+Screenshot" alt="Player Portal" width="48%" />
-</div>
-
 ## ✨ Features
 
 - 👑 **Admin Panel:** Manage your organization, seamlessly monitor events, and oversee all operational analytics.
@@ -60,26 +51,6 @@ Spin up a local PHP server right from the root directory!
 php -S localhost:8080
 ```
 Then jump to 👉 [http://localhost:8080](http://localhost:8080) to see it live!
-
-## 🗺 Architecture Flow
-
-```mermaid
-graph TD
-    A[Public SportsX Landing Page] --> B{Login}
-    B -- Role: Admin --> C[Admin Dashboard]
-    B -- Role: Player --> D[Player Portal]
-    
-    C --> E[Manage Events & Schedules]
-    C --> F[Approve Player Registrations]
-    C --> G[View System Analytics]
-    
-    D --> H[View Upcoming Events]
-    D --> I[Manage Individual Profile]
-    D --> J[Register for Team Games]
-    
-    E -. Updates .-> H
-    J -. Pending Approval .-> F
-```
 
 ## 📂 Project Structure
 
