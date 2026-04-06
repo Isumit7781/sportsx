@@ -47,6 +47,11 @@ A comprehensive web-based platform built with PHP and MySQL to manage sports eve
 
 Contributions, issues, and feature requests are welcome. Feel free to check the issues page if you want to contribute.
 
+## Credits & Contributors
+
+- **Sumit** ([@Isumit7781](https://github.com/Isumit7781)) - Lead Developer & Maintainer
+- Built using **PHP, MySQL, and Tailwind CSS**.
+
 ## License
 
 This project is open-sourced under the [MIT License](LICENSE).
