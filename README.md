@@ -39,9 +39,9 @@ A comprehensive web-based platform built with PHP and MySQL to manage sports eve
 4. **Run the Application**
    - If using PHP built-in server, start it inside the project root:
      ```bash
-     php -S localhost:8000
+     php -S localhost:8080
      ```
-   - Open your browser and navigate to `http://localhost:8000`.
+   - Open your browser and navigate to `http://localhost:8080`.
 
 ## Contributing
 
