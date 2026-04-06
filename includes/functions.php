@@ -17,7 +17,7 @@ function getRandomAvatar($gender = null) {
 
     // Get the avatar directory based on gender
     $avatarDir = 'assets/images/avatars/' . $gender;
-    $fullPath = $_SERVER['DOCUMENT_ROOT'] . '/sports/' . $avatarDir;
+    $fullPath = $_SERVER['DOCUMENT_ROOT'] . '/' . $avatarDir;
 
     // Check if directory exists
     if (!is_dir($fullPath)) {
@@ -36,7 +36,7 @@ function getRandomAvatar($gender = null) {
     $randomAvatar = $avatars[array_rand($avatars)];
 
     // Convert to web path
-    $webPath = str_replace($_SERVER['DOCUMENT_ROOT'] . '/sports/', '', $randomAvatar);
+    $webPath = str_replace($_SERVER['DOCUMENT_ROOT'] . '/', '', $randomAvatar);
 
     return $webPath;
 }
