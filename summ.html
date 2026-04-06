@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summary</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .event-container {
+            width: 70%;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the toggle button */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label.show-summary-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        label.show-summary-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Style for the event summary */
+        .event-summary {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="checkbox"]:checked + label + .event-summary {
+            display: block;
+        }
+
+        .event-summary ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .event-summary ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="event-container">
+        <!-- Hidden checkbox to toggle the event summary -->
+        <input type="checkbox" id="toggle-summary">
+
+        <!-- Label that acts as the button -->
+        <label class="show-summary-btn" for="toggle-summary">Show Event Summary</label>
+
+        <!-- Event summary section (Initially hidden) -->
+        <div class="event-summary">
+            <h2>Event Summary</h2>
+            <p><strong>Event Date:</strong> 2025-05-20</p>
+            <p><strong>Event Details:</strong> Annual Science Fair</p>
+            <p><strong>Number of Participants:</strong> 50</p>
+            <p><strong>Participants:</strong></p>
+            <ul>
+                <li>John Doe</li>
+                <li>Jane Smith</li>
+                <li>Alice Brown</li>
+                <li>David White</li>
+                <!-- Add more participants here -->
+            </ul>
+            <p><strong>Winner:</strong> John Doe</p>
+        </div>
+    </div>
+
+</body>
+</html>

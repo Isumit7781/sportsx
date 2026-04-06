@@ -1,0 +1,408 @@
+/* Main Styles for Sports Management System */
+
+/* Custom CSS to enhance Tailwind and Bootstrap */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease;
+}
+
+/* Custom Card Styles */
+.custom-card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1;
+}
+
+.custom-card-header {
+    @apply px-6 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold;
+}
+
+.custom-card-body {
+    @apply p-6;
+}
+
+/* Stats Cards */
+.stats-card {
+    @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300 border border-gray-100;
+}
+
+.stats-card:hover {
+    @apply shadow-lg transform -translate-y-2 border-blue-100;
+}
+
+.stats-icon {
+    @apply text-4xl text-blue-500 mb-4 transform transition-transform duration-500 hover:scale-110;
+}
+
+/* Tables */
+.custom-table {
+    @apply min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden;
+}
+
+.custom-table thead {
+    @apply bg-gray-50;
+}
+
+.custom-table th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.custom-table tbody {
+    @apply bg-white divide-y divide-gray-200;
+}
+
+.custom-table td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+}
+
+.custom-table tr:hover {
+    @apply bg-blue-50;
+}
+
+/* Forms */
+.custom-input {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50;
+}
+
+.custom-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.custom-button {
+    @apply inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200;
+}
+
+.custom-button-secondary {
+    @apply inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200;
+}
+
+/* Event Cards */
+.event-card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 h-full;
+}
+
+.event-card:hover {
+    @apply shadow-lg transform -translate-y-1;
+}
+
+.event-date {
+    @apply inline-block bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-md mb-3;
+}
+
+.event-location {
+    @apply text-gray-500 flex items-center text-sm;
+}
+
+/* Profile */
+.profile-header {
+    @apply bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-xl mb-6;
+}
+
+.profile-img {
+    @apply w-24 h-24 rounded-full object-cover border-4 border-white shadow-md;
+}
+
+/* Results */
+.result-position {
+    @apply text-xl font-bold w-10 h-10 leading-10 text-center rounded-full bg-gray-100 inline-block;
+}
+
+/* Individual positions */
+.individual .position-1 {
+    @apply bg-yellow-400 text-gray-800;
+}
+
+.individual .position-2 {
+    @apply bg-gray-300 text-gray-800;
+}
+
+.individual .position-3 {
+    @apply bg-yellow-700 text-white;
+}
+
+/* Team positions */
+.team .position-1 {
+    @apply bg-blue-600 text-white;
+}
+
+.team .position-2 {
+    @apply bg-blue-400 text-white;
+}
+
+.team .position-3 {
+    @apply bg-blue-300 text-gray-800;
+}
+
+/* For backward compatibility */
+.position-1 {
+    @apply bg-yellow-400 text-gray-800;
+}
+
+.position-2 {
+    @apply bg-gray-300 text-gray-800;
+}
+
+.position-3 {
+    @apply bg-yellow-700 text-white;
+}
+
+/* Login and Register pages */
+.auth-wrapper {
+    @apply flex justify-center items-center min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-50;
+}
+
+.auth-card {
+    @apply max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-md;
+}
+
+.auth-header {
+    @apply text-center text-2xl font-extrabold text-gray-900 mb-6;
+}
+
+/* Sidebar */
+.sidebar {
+    @apply bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-500;
+}
+
+.sidebar-link {
+    @apply flex items-center space-x-2 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 hover:pl-6;
+}
+
+.sidebar-link.active {
+    @apply bg-blue-600 text-white hover:bg-blue-700 hover:text-white border-l-4 border-blue-300;
+}
+
+.sidebar-link i {
+    @apply transition-transform duration-300;
+}
+
+.sidebar-link:hover i {
+    @apply transform scale-110;
+}
+
+/* Custom badges */
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-upcoming {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.badge-ongoing {
+    @apply bg-green-100 text-green-800;
+}
+
+.badge-completed {
+    @apply bg-gray-100 text-gray-800;
+}
+
+.badge-cancelled {
+    @apply bg-red-100 text-red-800;
+}
+
+.badge-pending {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-approved {
+    @apply bg-green-100 text-green-800;
+}
+
+.badge-rejected {
+    @apply bg-red-100 text-red-800;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 0.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.5s ease-in-out;
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.animate-bounce {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Custom Utilities */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #3b82f6, #2563eb);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-header {
+        @apply text-center;
+    }
+
+    .profile-img {
+        @apply mx-auto mb-4;
+    }
+}
+
+/* Bootstrap compatibility */
+.form-control {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #409EFF;
+    border-color: #409EFF;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #337ecc;
+    border-color: #337ecc;
+    color: white;
+}
+
+.btn-success {
+    background-color: #67C23A;
+    border-color: #67C23A;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #529b2e;
+    border-color: #529b2e;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #F56C6C;
+    border-color: #F56C6C;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #e04545;
+    border-color: #e04545;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #E6A23C;
+    border-color: #E6A23C;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #c78722;
+    border-color: #c78722;
+    color: white;
+}
+
+.btn-info {
+    background-color: #909399;
+    border-color: #909399;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #777a80;
+    border-color: #777a80;
+    color: white;
+}
+
+.card {
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: #f9fafb;
+    border-bottom: 1px solid #f3f4f6;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.table {
+    font-family: 'Poppins', sans-serif;
+}
+
+.table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+}
+
+.table-hover tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+    transform: scale(1.01);
+}

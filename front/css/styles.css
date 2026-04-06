@@ -1,0 +1,375 @@
+/* Custom CSS for Sports Management System */
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header */
+}
+
+/* Custom Utilities */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #5046E5, #8A84FF);
+}
+
+/* Navbar Styles */
+#navbar {
+    transition: all 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #5046E5, #8A84FF);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-link {
+    position: relative;
+    display: inline-block;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-delay: calc(var(--index) * 0.1s);
+}
+
+#mobile-menu.open .mobile-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animated Shapes */
+.shape-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-animation:nth-child(odd) {
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scroll-behavior: smooth;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Counter Animation */
+.counter {
+    position: relative;
+    display: inline-block;
+}
+
+.counter::after {
+    content: attr(data-target);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+/* Button Hover Effects */
+.btn-hover-slide {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-hover-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.btn-hover-slide:hover::before {
+    left: 100%;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(80, 70, 229, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(80, 70, 229, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(80, 70, 229, 0);
+    }
+}
+
+@keyframes pulse-slow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(80, 70, 229, 0.2);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(80, 70, 229, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(80, 70, 229, 0);
+    }
+}
+
+/* Animation Classes */
+.animate-fadeIn { animation: fadeIn 1s ease forwards; }
+.animate-fadeInUp { animation: fadeInUp 0.8s ease forwards; }
+.animate-fadeInDown { animation: fadeInDown 0.8s ease forwards; }
+.animate-fadeInLeft { animation: fadeInLeft 0.8s ease forwards; }
+.animate-fadeInRight { animation: fadeInRight 0.8s ease forwards; }
+.animate-zoomIn { animation: zoomIn 0.8s ease forwards; }
+.animate-pulse { animation: pulse 2s infinite; }
+.animate-pulse-slow { animation: pulse-slow 3s infinite; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem !important;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    .testimonial-slider {
+        scroll-snap-type: x mandatory;
+    }
+}
+
+/* Dashboard UI Styles */
+.dashboard-window {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dashboard-window:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(80, 70, 229, 0.1);
+}
+
+.window-header {
+    background: #1F2937;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.window-controls {
+    display: flex;
+    gap: 6px;
+    margin-right: 1rem;
+}
+
+.window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.window-title {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.window-body {
+    background: #F9FAFB;
+    padding: 1rem;
+}
+
+/* Glassmorphism Effects */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature Card Hover Effects */
+.feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
+}
+
+.feature-card:hover {
+    border-color: #5046E5;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(80, 70, 229, 0.1);
+}
+
+.feature-icon {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    background-color: #5046E5;
+    color: white;
+}
+
+/* Pricing Card Styles */
+.pricing-card {
+    transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
+}
+
+.pricing-card:hover {
+    border-color: #5046E5;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(80, 70, 229, 0.1);
+}
+
+.pricing-popular {
+    border-color: #5046E5;
+    box-shadow: 0 10px 25px -5px rgba(80, 70, 229, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5046E5;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4338CA;
+}

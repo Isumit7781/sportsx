@@ -1,0 +1,13 @@
+.DS_Store
+.vscode/
+.idea/
+*.log
+node_modules/
+vendor/
+
+# Environment files
+.env
+.env.local
+
+# Database config
+includes/config.php
